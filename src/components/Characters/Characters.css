@@ -1,0 +1,103 @@
+#modal {
+    display: inline-flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+#modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* #modal::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+} */
+.characters-list {
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    list-style: none;
+    overflow: auto;
+    padding: 30px;
+    background: #fff;
+}
+.characters-item {
+    width: 20%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.characters-item__wrapper {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.2);
+}
+.characters-item__img {
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.characters-item__img::after {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.characters-item__title {
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.characters-item__img img {
+    width: 100%;
+}
+.modal-close {
+    display: block;
+    position: absolute;
+    width: 40px;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+.modal-not {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 30px;
+    background: #fff;
+}
+.modal-not__close {
+    display: block;
+    position: absolute;
+    width: 40px;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: #000;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 255, 0.918);
+    border-radius: 2px;
+}
